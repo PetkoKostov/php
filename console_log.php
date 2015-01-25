@@ -8,14 +8,19 @@
  * ========================================================================
 
 TESTS
+ *** Array
  * $test_array = array('team'=>'levski', 'team2'=>'cska');
+ * console_log($test_array);
  *
+ *** Object
  * $test_object = new stdClass();
  * $test_object->team = 'levski';
  * $test_object->team2 = 'cska';
+ * console_log($test_object);
  *
+ *** String
  * $test_string = 'striiing';
- * $this->console_log($test_array);
+ * console_log($test_string );
  */
 
 

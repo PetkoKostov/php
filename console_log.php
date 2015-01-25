@@ -57,8 +57,7 @@ function console_log_real($data, $name = FALSE) { // за вс. сл. FALSE. А�
 
     $output = str_replace('stdClass::__set_state', $real_var_name . ' = ', $output);
 
-    $CI = & get_instance();  //get instance, access the CI superobject
-    $CI->session->set_flashdata('console_log', $output);
+	return $output;
 
 }
 
@@ -75,5 +74,5 @@ function console_log($a) { // Should work over several includes:
     preg_match('/' . __FUNCTION__ . '\s*\((.*)\)\s*;/u', $code, $name); // <-- СЕКС
     $real_name = trim($name[1]);
 
-    return console_log_real($a, $real_name);
+    echo console_log_real($a, $real_name);
 }
